@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Servicos\NewFolder1\**" />
+    <Compile Remove="Servicos\NewFolder2\**" />
+    <Compile Remove="Servicos\NewFolder\**" />
+    <EmbeddedResource Remove="Servicos\NewFolder1\**" />
+    <EmbeddedResource Remove="Servicos\NewFolder2\**" />
+    <EmbeddedResource Remove="Servicos\NewFolder\**" />
+    <None Remove="Servicos\NewFolder1\**" />
+    <None Remove="Servicos\NewFolder2\**" />
+    <None Remove="Servicos\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="UseCases\Usuario\Registrar\IEncriptadorDeSenha.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.6.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\MeuLivroDeReceitas.Comunicacao\MeuLivroDeReceitas.Comunicacao.csproj" />
+    <ProjectReference Include="..\..\Shared\MeuLivroDeReceitas.Exceptions\MeuLivroDeReceitas.Exceptions.csproj" />
+    <ProjectReference Include="..\MeuLivroDeReceitas.Domain\MeuLivroDeReceitas.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
